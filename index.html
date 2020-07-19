@@ -15,15 +15,36 @@
     <div class="question-container">
       <div class="question-item">
         <div class="question-label">Question 1: if you click the square below the text changes 'x' to 'o' or vice versa </div>
-        <div id="a-1"></div>
+
+        <div id="question1">  
+         <div class="square">
+           x
+         </div>
+        </div>
       </div>
+
+
+
       <div class="question-item">
         <div class="question-label">Question 2: select any item on the list below and click the remove button to eliminate the item</div>
-        <div id="a-2"></div>
+        
+        <div id="question2">
+          <select id="mySelect"> 
+            <option value ='R'>Red</option> 
+            <option>White</option> 
+            <option>Black</option> 
+            <option>Green</option> 
+            <option>Orange</option> 
+          </select>
+
+          <button>Remove</button>
+        </div>
+
+
       </div>
       <div class="question-item">
         <div class="question-label">Question 3: insert the radius of a sphere and press the calculate button to see the results</div>
-        <div id="a-3">
+        <div id="question3">
           <form action="" method="post" id="MyForm">
             <label for="radius">Radius </label><input type="text" name="radius" id="radius" required>
             <label for="volume">Volume </label><input type="text" name="volume" id="volume">
@@ -32,9 +53,18 @@
           </form>
         </div>
       </div>
+
+
       <div class="question-item">
         <div class="question-label">Question 4: press any of those buttons to hide or display the respective question</div>
-        <div id="a-4"></div>
+        <div id="question4">
+          <button id="showHide1">Show/Hide Question-1</button>
+          <button id="showHide2">Show/Hide Question-2</button>
+          <button id="showHide3">Show/Hide Question-3</button><br>
+         
+          <dive id="showAns">
+          </dive>
+        </div>
       </div>
     </div>
   </div>

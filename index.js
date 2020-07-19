@@ -6,20 +6,29 @@ Each time the user clicks on the new element it has to respond changing the disp
 
 //Assign 'question1' element to  a 'div' varialbe, Assign 'square' element to a 'square' variable.
 let div = document.getElementById('question1');
-let square = document.getElementsByClassName('square')[0];
+//document.getElementsByClassName('square')[0];
 
 // call listen function
 //create new div element 'nDive', add all square syling to the new element
 //Assign string value to the new div, then replace the old div element with the new one!!
 
 div.addEventListener ('click', () => {
-   
-    let nDiv = document.createElement('div');
-    nDiv.classList.add('square')
+    nDiv = document.getElementsByClassName('square')[0];
     nDiv.innerHTML = "o";         
-    div.replaceChild(nDiv, square); 
     });
 
+
+    /* -----------Create new Div with different text -------------
+    let div = document.getElementById('question1');
+    let square = document.getElementsByClassName('square')[0];
+    div.addEventListener ('click', () => {
+    
+        let nDiv = document.createElement('div');
+        nDiv.classList.add('square')
+        nDiv.innerHTML = "o";         
+        div.replaceChild(nDiv, square); 
+    }); 
+    --------------------------------------------------------------*/
 
 /*----------------------------------------Question 2 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Write a JavaScript program to remove items from a dropdown list. In order to create the list we are providing you with the array below, those items are the ones you need to add to the dropdown list as the select options

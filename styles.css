@@ -56,3 +56,43 @@ button:hover{
   font-weight: 700;
   margin-bottom: 1em;
 }
+      /* p
+      {
+      display: none; 
+      /* display: inline-block; */
+      /* padding: 20px;
+      position: relative;
+      
+      } 
+      */
+
+#question1 {
+  display: none;
+}
+
+#question1.visible {
+  /* display: block; */
+  padding: 20px;
+  display: inline-block;
+}
+
+
+#question2 {
+  display: none;
+}
+
+#question2.visible {
+  display: inline-block;
+  /* display: block; */
+  padding: 20px;
+}
+
+#question3 {
+  display: none;
+}
+
+#question3.visible {
+  display: inline-block;
+  /* display: block; */
+  padding: 20px;
+}
