@@ -36,16 +36,45 @@ you also need to create a button that makes the remove action of the element sel
 const colors = [ 'red' , 'white', 'black' , 'green' , 'orange'];
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-// assign the button element to 'removeColorButton', and call 'click function it to  assign "removeColorButton".
-const removeColorButton = document.getElementsByTagName('button')[0];
-removeColorButton.addEventListener('click', ()  => 
+let q2 = document.getElementById('question2');
+const colors = ['red', 'white', 'black', 'green', 'orange'];
+
+let select = document.createElement('select')
+q2.append(select);
+
+//function loops over the array items and store them in variable within <option> tag. 
+let colorOptions = " ";
+let options = function () 
+{ 
+  for (i = 0; i < colors.length; i++)
     {
-        //Assign mySelect element to select variable, use it to access the index and assing it to value "variable",
-        // then delete the selected index value
-        var select = document.getElementById('mySelect');
-        value = select.selectedIndex;
-        select.removeChild(select[value]);
-    });  
+        colorOptions += `<option> ${colors[i]} </option>`;
+    }
+  return colorOptions;
+}
+select.innerHTML = options();
+
+//create button, append it, and name it "Remove Color "
+let btn = document.createElement('button');
+let button = document.getElementById('question2').appendChild(btn);
+btn.textContent = "Remove Color";
+
+//when the event is clicked,item selected will be removed
+btn.addEventListener('click', () => 
+{ 
+  select.remove(select.selectedIndex);
+})
+
+// assign the button element to 'removeColorButton', and call 'click function it to  assign "removeColorButton".
+// const removeColorButton = document.getElementsByTagName('button')[0];
+// removeColorButton.addEventListener('click', ()  => 
+//     {
+//         //Assign mySelect element to select variable, use it to access the index and assing it to value "variable",
+//         // then delete the selected index value
+//         var select = document.getElementById('mySelect');
+//         value = select.selectedIndex;
+//         select.removeChild(select[value]);
+//     });  
 
 
 /*------------------------------------------------Question 3 --------------------------------------------------------------------------------------------------------------------------
@@ -104,8 +133,8 @@ Now in this Exercise we want you to create 3 buttons wich clicks actions are goi
 
 
     let question3 = document.getElementById('question3');
-    let button= document.getElementById('showHide3');
-    button.addEventListener('click', ()  => 
+    let button_4= document.getElementById('showHide3');
+    button_4.addEventListener('click', ()  => 
     {
         question3.classList.toggle('visible');
     } );
